@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="How to create / mint your NFT, native token or cryptocurrency on the cardano (ADA) blockchain in 5 minutes.">
+        <meta name="author" content="Cardano Native Token">
+        <meta name="csrf-token" content="lbkYitpV-X_d-TUDQr0UGPZ2Jicod_fdkgP0">
+        <title>Create / Mint your Cardano (ADA) Native Token and NFT</title>
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="apple-touch-icon" type="image/x-icon" href="/assets/img/apple-touch-icon-57x57-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="/assets/img/apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="/assets/img/apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="/assets/img/apple-touch-icon-144x144-precomposed.png">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&amp;display=swap" rel="stylesheet">
+        <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+        <link href="/assets/css/style.css" rel="stylesheet">
+        <link href="/assets/css/menu.css" rel="stylesheet">
+        <link href="/assets/css/vendors.min.css" rel="stylesheet">
+        <link href="/assets/css/icon_fonts/css/all_icons.min.css" rel="stylesheet">
+        <link href="/assets/css/skins/square/grey.css" rel="stylesheet">
+        <link href="/assets/css/custom.css" rel="stylesheet">
+        <script src="/assets/js/modernizr.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css">
+        <link href="https://unpkg.com/filepond/dist/filepond.css" rel="stylesheet">
+        <link href="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css" rel="stylesheet">
+        <!-- COMMON SCRIPTS-->
+        <script src="/assets/js/jquery-3.5.1.min.js"></script>
+        <script src="/assets/js/common_scripts.min.js"></script>
+        <script src="/assets/js/menu.js"></script>
+        <script src="/assets/js/main.js"></script>
+        <script src="/assets/js/wizard_func_single_branch.js"></script>
+        <script src="/assets/js/anslume.js"></script>
+        <!-- include FilePond library-->
+        <script src="https://unpkg.com/filepond/dist/filepond.min.js"></script>
+        <!-- include FilePond plugins-->
+        <script src="https://unpkg.com/filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-file-validate-size/dist/filepond-plugin-file-validate-size.js"></script>
+        <script src="https://unpkg.com/filepond-plugin-file-validate-type/dist/filepond-plugin-file-validate-type.js"></script>
+        <!-- include FilePond jQuery adapter-->
+        <script src="https://unpkg.com/jquery-filepond/filepond.jquery.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics-->
+        <!-- Global site tag (gtag.js) - Google Analytics-->
+        <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-E25LDCMRXV"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-E25LDCMRXV');
+        </script>
+    </head>
+    <body>
+        <div id="preloader">
+            <div data-loader="circle-side"></div>
+        </div>
+        <div id="loader_form">
+            <div id="circle-loader-popup" data-loader="circle-side-2"></div>
+            <div class="status-information">
+                <div class="status-information-wrapper">
+                    <p class="main-content-loader">Submitting information</p>
+                    <div id="after-first-step">
+                        <p>
+                            Please send this EXACT AMOUNT <span id="amount-to-send"></span>
+                            to the following address: <span id="payment-address"></span>
+                            <button class="btn btn-clip" data-clipboard-target="#payment-address">
+                                <img src="/assets/img/SVG_icon_set_4/files.svg" alt="Copy to clipboard">
+                            </button>
+                        </p>
+                        <p>
+                            Your reference for the transaction: <span id="reference-transaction"></span>
+                        </p>
+                        <p>YOU CANNOT USE AN ACCOUNT FROM BINANCE, KRAKEN, OR ANY EXCHANGES PLACES.</p>
+                        <p>
+                            You should use an official wallet <a class="animated_link" href="https://daedaluswallet.io/" target="_blank">Daedalus</a>
+                            or <a class="animated_link" href="https://yoroi-wallet.com/">Yoroi</a>
+                        </p>
+                        <p class="warning">Don &apos;t close your internet browser.</p>
+                        <p>
+                            If something happens, send us the reference with the payment amount per email:<strong>contact@cardano-native-token.com</strong>
+                        </p>
+                        <p>Once the amount is received on our address, we will mint the new native token and send it back to you with 2 ADA.</p>
+                        <p>
+                            You can always follow your transaction arriving to our <a class="animated_link" target="_blank" href="">address on the blockchain</a>
+                            .
+                        </p>
+                    </div>
+                    <div id="success-minting">
+                        <p style="color: #acd373">
+                            Your token has been successfully created and is sent back to your address.<br>You will soon receive the token and the metadata on your wallet.
+                        </p>
+                        <p>
+                            You can follow the transaction with <a class="animated_link" href="https://daedaluswallet.io/" id="link-transac-confirmed" target="_blank">the following link</a>
+                            .
+                        </p>
+                        <p>Don't hesitate to contact us at "contact@cardano-native-token.com" if you encounter any issues.</p>
+                        <p>If you want to register your Native Token on the cardano token registry, please contact us via email and we will provide a signed version of the Metadata.</p>
+                        <p>
+                            You can also see  your minted native token /nft  on pool.pm with the <a class="animated_link" href="https://daedaluswallet.io/" id="link-transac-confirmed-poolpm" target="_blank">the following link</a>
+                        </p>
+                        <a class="animated_link" href="/">Back to the homepage</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-3">
+                        <div id="logo_home">
+                            <h1>
+                                <span class="slogan_top">Cardano Token and NFT Builder</span>
+                                <a href="/">Create / Mint your Cardano (ADA) Native Token and NFT</a>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-9">
+                        <div id="social"></div>
+                        <!-- /social-->
+                        <nav>
+                            <ul class="cd-primary-nav">
+                                <li>
+                                    <a class="animated_link" href="/how-does-it-work">How does it work?</a>
+                                </li>
+                                <li>
+                                    <a class="animated_link" href="/faq">F.A.Q</a>
+                                </li>
+                                <li>
+                                    <a class="animated_link" href="/about">Contacts - About</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main>
+            <div class="container">
+                <div id="wizard_container">
+                    <form id="info-token-minting" name="info-token-minting" method="POST">
+                        <input id="website" name="website" type="text" value="">
+                        <div id="middle-wizard">
+                            <!-- first step-->
+                            <div class="step" data-state="branchtype">
+                                <div class="question_title">
+                                    <h3>What do you want to create on Cardano (ADA) ?</h3>
+                                    <p>
+                                        For the whole process, you will need approximately <strong>5 minutes and everything is automatized</strong>
+                                        .<br>
+                                        You will  need to have a wallet that you control and modern enough to accept ADA Native Token.<br>
+                                        We strongly  advise to you use the officials wallet solutions:
+                                        <a class="animated_link" href="https://daedaluswallet.io/" target="_blank">Daedalus</a>
+                                        or
+                                        <a class="animated_link" href="https://yoroi-wallet.com/" target="_blank">Yoroi</a>
+                                        .<br>
+                                        <strong>You won't be able to receive your ADA Native Token or NFT from a exchange place account</strong>
+                                        .<br>The total cost of  the transaction is around is 5 ADA.
+                                    </p>
+                                    <p style="margin-top:10px">
+                                        Check our page <a class="animated_link" href="/how-does-it-work">How does it work?</a>
+                                        for more information<br>
+                                    </p>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-4">
+                                        <div class="item">
+                                            <input class="required" id="answer_1" type="radio" name="branch_group_1" value="currency">
+                                            <label for="answer_1">
+                                                <img src="/assets/img/seo_icon_3.svg" alt="">
+                                                <strong>ADA Native Token</strong>
+                                                You want to create your own currency on Cardano and issue a specific number of this new native token.
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="item">
+                                            <input class="required" id="answer_2" name="branch_group_1" type="radio" value="nft">
+                                            <label for="answer_2">
+                                                <img src="/assets/img/design_icon_4.svg" alt="">
+                                                <strong>NFT</strong>
+                                                A non-fungible token (NFT) is a unit of data stored on a blockchain, that certifies a digital asset to be unique and therefore not interchangeable.
+                                                For more information about NFT check the <a href="https://en.wikipedia.org/wiki/Non-fungible_token" target="_blank">Wikipedia Page</a>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /row-->
+                            </div>
+                            <!-- /first step-->
+                            <!-- /step-->
+                            <div class="branch" id="currency">
+                                <div class="step" data-state="final-token">
+                                    <div class="question_title">
+                                        <h3>Create your new token</h3>
+                                        <p>Please enter the information about your new token.</p>
+                                        <p>
+                                            We strongly advise you to read the <a class="animated_link" href="https://docs.cardano.org/native-tokens/learn" target="_blank">official documentation</a>
+                                            about the purposes and definition of Cardano Native Token
+                                        </p>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-5">
+                                            <div class="box_general">
+                                                <div class="form-group">
+                                                    <label>Token Symbol</label>
+                                                    <span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The symbol of your token (part of the final asset ID)"></span>
+                                                    <input class="required form-control" type="text" name="token_symbol" placeholder="Token Symbol" maxlength="32" data-rule-alphanumeric="true" data-rule-minlength="3" data-rule-maxlength="32">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Name of your token</label>
+                                                    <span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="This will part of the metadata sent along with your token"></span>
+                                                    <input class="required form-control" type="text" name="token_name" placeholder="Token Name" maxlength="32" data-rule-alphanumericextended="true" data-rule-minlength="3" data-rule-maxlength="32">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Description</label>
+                                                    <span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="This will part of the metadata sent along with your token"></span>
+                                                    <input class="form-control" type="text" name="token_description" placeholder="Enter a description for your currency (max 60 chars)" maxlength="60" data-rule-maxlength="60">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Amount to create</label>
+                                                    <span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="How many token you will want to have, think of the future as well"></span>
+                                                    <input class="required form-control" type="number" name="token_amount" placeholder="Token Amount" value="10" min="1" data-rule-max="1000000000000" max="1000000000000">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Logo (Visible on pool.pm)</label>
+                                                    <span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="It will be store on IPFS (max 15MB)"></span>
+                                                    <input class="my-pond-logo" type="file" name="filepond">
+                                                </div>
+                                                <p>
+                                                    Advanced features<span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="More policy will come soon"></span>
+                                                </p>
+                                                <div class="form-group add_bottom_30">
+                                                    <div class="styled-select">
+                                                        <select name="policy">
+                                                            <option value="" selected="">Select your minting policy</option>
+                                                            <option value="one-time">One-Time Minting</option>
+                                                            <option value="time-locked" disabled="">Time-locked mint policy (SOON AVAILABLE)</option>
+                                                            <option value="custom" disabled="">Customized (SOON AVAILABLE)</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /box_general-->
+                                        </div>
+                                    </div>
+                                    <!-- /row-->
+                                </div>
+                            </div>
+                            <!-- /step-->
+                            <div class="branch" id="nft">
+                                <div class="step" data-state="final-nft">
+                                    <div class="question_title">
+                                        <h3>Create your NFT</h3>
+                                        <p>Please enter the information about your NFT</p>
+                                        <p>
+                                            Be aware that your NFT will be uploaded on a <a class="interactive_link" href="https://en.wikipedia.org/wiki/InterPlanetary_File_System" target="_blank">IPFS server</a>
+                                            .
+                                        </p>
+                                    </div>
+                                    <div class="row justify-content-center">
+                                        <div class="col-lg-5">
+                                            <div class="box_general">
+                                                <div class="form-group">
+                                                    <label>NFT Name</label>
+                                                    <span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="The symbol of your NFT (part of the final asset ID)"></span>
+                                                    <input class="required form-control" type="text" name="nft_symbol" placeholder="Name for your NFT" maxlength="32" data-rule-alphanumeric="true" data-rule-minlength="3" data-rule-maxlength="32">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Author (Optional)</label>
+                                                    <span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="This will part of the metadata sent along with your NFT"></span>
+                                                    <input class="required form-control" type="text" name="nft_name" placeholder="Author" maxlength="32" data-rule-alphanumericextended="true" data-rule-minlength="3" data-rule-maxlength="32">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>Description Optional</label>
+                                                    <span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="This will part of the metadata sent along with your NFT"></span>
+                                                    <input class="form-control" type="text" name="nft_description" placeholder="Enter a description for your NFT (max 60 chars)" maxlength="60" data-rule-maxlength="60">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label>File (Images, Audio or Video) (Max 15MB)</label>
+                                                    <span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="It will be store on IPFS (max 15MB)"></span>
+                                                    <input class="my-pond" type="file" name="filepond" required>
+                                                </div>
+                                            </div>
+                                            <!-- /box_general-->
+                                        </div>
+                                    </div>
+                                    <!-- /row-->
+                                </div>
+                            </div>
+                            <!-- Final step for token ==============================-->
+                            <div class="submit step stop" id="final-token">
+                                <div class="question_title">
+                                    <h3>Final validation</h3>
+                                    <p></p>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-5">
+                                        <div class="box_general">
+                                            <p>By clicking on submit, the process will start the generation of your new token on the blockchain.</p>
+                                            <p>Do you want to give us some your new token (see it as a tips) to the team behind this app? (we like to collect those)</p>
+                                            <div class="form-group">
+                                                <label>Amount of your token to give to the team</label>
+                                                <span class="icon_info_alt icon_form_tooltip" aria-hidden="true" data-toggle="tooltip" data-placement="top" title="Completely optional"></span>
+                                                <input class="form-control" type="number" name="token_tips" placeholder="Tip for the team" value="0">
+                                                <div class="checkbox_questions">
+                                                    <input class="icheck required" name="terms" type="checkbox" value="yes">
+                                                    <label>
+                                                        Please accept the <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /box_general-->
+                                    </div>
+                                </div>
+                                <!-- /row-->
+                            </div>
+                            <!-- Final step for token ==============================-->
+                            <div class="submit step" id="final-nft">
+                                <div class="question_title">
+                                    <h3>Final validation for your NFT</h3>
+                                    <p></p>
+                                </div>
+                                <div class="row justify-content-center">
+                                    <div class="col-lg-5">
+                                        <div class="box_general">
+                                            <p>By clicking on submit, the process will start the generation of your new NFT on the blockchain.</p>
+                                            <div class="form-group">
+                                                <div class="checkbox_questions">
+                                                    <input class="icheck" name="accepted-listing" type="checkbox" value="yes">
+                                                    <label>Can we display your NFT in the future?</label>
+                                                </div>
+                                                <div class="checkbox_questions">
+                                                    <input class="icheck required" name="terms-nft" type="checkbox" value="yes">
+                                                    <label>
+                                                        Please accept the <a href="#" data-toggle="modal" data-target="#terms-txt">terms and conditions</a>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /box_general-->
+                                    </div>
+                                </div>
+                                <!-- /row-->
+                            </div>
+                            <!-- Final step for token ==============================-->
+                        </div>
+                        <!-- /middle-wizard-->
+                        <div id="bottom-wizard">
+                            <button class="backward" type="button" name="backward">Backward</button>
+                            <button class="forward" type="button" name="forward">Forward</button>
+                            <button class="submit" type="submit" name="process">Submit</button>
+                        </div>
+                        <!-- /bottom-wizard-->
+                    </form>
+                </div>
+                <!-- /Wizard container-->
+            </div>
+            <!-- /Container-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h4 class="text-center">
+                            More than <span id="number-minted-website">258</span>
+                            cardano native tokens and NFT minted/created via this website.
+                        </h4>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-lg-12">
+                        <div class="h4 text-center">About the Cardano token registry</div>
+                        <p class="text-center">
+                            If you need to register your minted native token on cardano registry, send us an email at contact@cardano-native-token.com<br>
+                            We will provide you the JSON signed containing the metadata required.<br>
+                            We are trying to make this process automatic for the users.<br>
+                            For more information please check out our <a class="animated_link" href="/faq">F.A.Q</a>
+                            .
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="modal fade" id="terms-txt" tabindex="-1" role="dialog" aria-labelledby="termsLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="termsLabel">Terms and conditions</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h1>Terms and conditions</h1>
+                        <p>
+                            These terms and conditions ("Agreement") set forth the general terms and conditions of your use of the<a target="_blank" rel="nofollow" href="https://cardano-native-token.com/">Cardano Native Token builder</a>
+                            website ("Website" or "Service""") and any of its related products and services (collectively, "Services") This Agreement is legally binding between you ("User", "you" or "your") and this Website operator ("Operator", "we", "us" or "our"). By accessing and using the Website and Services, you acknowledge that you have read, understood, and agree to be bound by the terms of this Agreement. If you are entering into this Agreement on behalf of a business or other legal entity, you represent that you have the authority to bind such entity to this Agreement, in which case the terms "User", "you" or "your" shall refer to such entity. If you do not have such authority, or if you do not agree with the terms of this Agreement, you must not accept this Agreement and may not access and use the Website and Services. You acknowledge that this Agreement is a contract between you and the Operator, even though it is electronic and is not physically signed by you, and it governs your use of the Website and Services. This terms and conditions policy was created with the help of the<a target="_blank" href="https://www.websitepolicies.com/terms-and-conditions-generator">terms and conditions generator</a>
+                            .<br>
+                            <br>
+                        </p>
+                        <h4>User content</h4>
+                        <p>
+                            The user acknowledge that any data uploaded on the website might be permanently stocked on decentralized blockchain technologies, and therefore cannot be ever removed.
+                            We do not own any data, information or material (collectively, "Content") that you submit on the Website in the course of using the Service. You shall have sole responsibility for the accuracy, quality, integrity, legality, reliability, appropriateness, and intellectual property ownership or right to use of all submitted Content. We may, but have no obligation to, monitor and review the Content on the Website submitted or created using our Services by you. You grant us permission to access, copy, distribute, store, transmit, reformat, display and perform the Content of your user account solely as required for the purpose of providing the Services to you. Without limiting any of those representations or warranties, we have the right, though not the obligation, to, in our own sole discretion, refuse or remove any Content that, in our reasonable opinion, violates any of our policies or is in any way harmful or objectionable. Unless specifically permitted by you, your use of the Website and Services does not grant us the license to use, reproduce, adapt, modify, publish or distribute the Content created by you or stored in your user account for commercial, marketing or any similar purpose.<br>
+                            <br>
+                        </p>
+                        <h4>Backups</h4>
+                        <p>
+                            We are not responsible for the Content residing on the Website. In no event shall we be held liable for any loss of any Content. It is your sole responsibility to maintain appropriate backup of your Content. Notwithstanding the foregoing, on some occasions and in certain circumstances, with absolutely no obligation, we may be able to restore some or all of your data that has been deleted as of a certain date and time when we may have backed up data for our own purposes. We make no guarantee that the data you need will be available.<br>
+                            <br>
+                        </p>
+                        <h4>Links to other resources</h4>
+                        <p>
+                            Although the Website and Services may link to other resources (such as websites, mobile applications, etc.), we are not, directly or indirectly, implying any approval, association, sponsorship, endorsement, or affiliation with any linked resource, unless specifically stated herein. Some of the links on the Website may be "affiliate links". This means if you click on the link and purchase an item, the Operator will receive an affiliate commission. We are not responsible for examining or evaluating, and we do not warrant the offerings of, any businesses or individuals or the content of their resources. We do not assume any responsibility or liability for the actions, products, services, and content of any other third parties. You should carefully review the legal statements and other conditions of use of any resource which you access through a link on the Website and Services. Your linking to any other off-site resources is at your own risk.<br>
+                            <br>
+                        </p>
+                        <h4>Prohibited uses</h4>
+                        <p>
+                            In addition to other terms as set forth in the Agreement, you are prohibited from using the Website and Services or Content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Website and Services, third party products and services, or the Internet; (h) to spam, phish, pharm, pretext, spider, crawl, or scrape; (i) for any obscene or immoral purpose; or (j) to interfere with or circumvent the security features of the Website and Services, third party products and services, or the Internet. We reserve the right to terminate your use of the Website and Services for violating any of the prohibited uses.<br>
+                            <br>
+                        </p>
+                        <h4>Intellectual property rights</h4>
+                        <p>
+                            "Intellectual Property Rights" means all present and future rights conferred by statute, common law or equity in or in relation to any copyright and related rights, trademarks, designs, patents, inventions, goodwill and the right to sue for passing off, rights to inventions, rights to use, and all other intellectual property rights, in each case whether registered or unregistered and including all applications and rights to apply for and be granted, rights to claim priority from, such rights and all similar or equivalent rights or forms of protection and any other results of intellectual activity which subsist or will subsist now or in the future in any part of the world. This Agreement does not transfer to you any intellectual property owned by the Operator or third parties, and all rights, titles, and interests in and to such property will remain (as between the parties) solely with the Operator. All trademarks, service marks, graphics and logos used in connection with the Website and Services, are trademarks or registered trademarks of the Operator or its licensors. Other trademarks, service marks, graphics and logos used in connection with the Website and Services may be the trademarks of other third parties. Your use of the Website and Services grants you no right or license to reproduce or otherwise use any of the Operator or third party trademarks.<br>
+                            <br>
+                        </p>
+                        <h4>Limitation of liability</h4>
+                        <p>
+                            To the fullest extent permitted by applicable law, in no event will the Operator, its affiliates, directors, officers, employees, agents, suppliers or licensors be liable to any person for any indirect, incidental, special, punitive, cover or consequential damages (including, without limitation, damages for lost profits, revenue, sales, goodwill, use of content, impact on business, business interruption, loss of anticipated savings, loss of business opportunity) however caused, under any theory of liability, including, without limitation, contract, tort, warranty, breach of statutory duty, negligence or otherwise, even if the liable party has been advised as to the possibility of such damages or could have foreseen such damages. To the maximum extent permitted by applicable law, the aggregate liability of the Operator and its affiliates, officers, employees, agents, suppliers and licensors relating to the services will be limited to an amount greater of one dollar or any amounts actually paid in cash by you to the Operator for the prior one month period prior to the first event or occurrence giving rise to such liability. The limitations and exclusions also apply if this remedy does not fully compensate you for any losses or fails of its essential purpose.<br>
+                            <br>
+                        </p>
+                        <h4>Indemnification</h4>
+                        <p>
+                            You agree to indemnify and hold the Operator and its affiliates, directors, officers, employees, agents, suppliers and licensors harmless from and against any liabilities, losses, damages or costs, including reasonable attorneys &apos;fees, incurred in connection with or arising from any third party allegations, claims, actions, disputes, or demands asserted against any of them as a result of or relating to your Content, your use of the Website and Services or any willful misconduct on your part.<br>
+                            <br>
+                        </p>
+                        <h4>Severability</h4>
+                        <p>
+                            All rights and restrictions contained in this Agreement may be exercised and shall be applicable and binding only to the extent that they do not violate any applicable laws and are intended to be limited to the extent necessary so that they will not render this Agreement illegal, invalid or unenforceable. If any provision or portion of any provision of this Agreement shall be held to be illegal, invalid or unenforceable by a court of competent jurisdiction, it is the intention of the parties that the remaining provisions or portions thereof shall constitute their agreement with respect to the subject matter hereof, and all such remaining provisions or portions thereof shall remain in full force and effect.<br>
+                            <br>
+                        </p>
+                        <h4>Dispute resolution</h4>
+                        <p>
+                            The formation, interpretation, and performance of this Agreement and any disputes arising out of it shall be governed by the substantive and procedural laws of Germany without regard to its rules on conflicts or choice of law and, to the extent applicable, the laws of Germany. The exclusive jurisdiction and venue for actions related to the subject matter hereof shall be the courts located in Germany, and you hereby submit to the personal jurisdiction of such courts. You hereby waive any right to a jury trial in any proceeding arising out of or related to this Agreement. The United Nations Convention on Contracts for the International Sale of Goods does not apply to this Agreement.<br>
+                            <br>
+                        </p>
+                        <h4>Changes and amendments</h4>
+                        <p>
+                            We reserve the right to modify this Agreement or its terms relating to the Website and Services at any time, effective upon posting of an updated version of this Agreement on the Website. When we do, we will revise the updated date at the bottom of this page. Continued use of the Website and Services after any such changes shall constitute your consent to such changes.<br>
+                            <br>
+                        </p>
+                        <h4>Acceptance of these terms</h4>
+                        <p>
+                            You acknowledge that you have read this Agreement and agree to all its terms and conditions. By accessing and using the Website and Services you agree to be bound by this Agreement. If you do not agree to abide by the terms of this Agreement, you are not authorized to access or use the Website and Services.<br>
+                            <br>
+                        </p>
+                        <h4>Contacting us</h4>
+                        <p>If you would like to contact us to understand more about this Agreement or wish to contact us concerning any matter relating to it, you may send an email to contact@cardano-native-token.com.</p>
+                        <p>This document was last updated on April 30, 2021</p>
+                        <br>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="container clearfix">
+                <ul>
+                    <li>
+                        <a class="animated_link" href="/about">About</a>
+                    </li>
+                    <li>
+                        <a class="animated_link" href="/faq">F.A.Q</a>
+                    </li>
+                    <li>
+                        <a class="animated_link" href="https://cardanoscan.io/address/addr1qyu6rh63z3akmengnfrj0prfvtak2sxr50rctxs60xu5yr6krpuk5k3ggkk2s5m93gd6lu3up9r2af8uwz4sx9gah20qqwah5a" target="_new">Our account on the blockchain</a>
+                    </li>
+                </ul>
+                <p>&copy;2021 Create / Mint your Cardano (ADA) Native Token and NFT</p>
+            </div>
+        </footer>
+        <!-- /footer-->
+        <div class="cd-overlay-nav">
+            <span></span>
+        </div>
+        <!-- /cd-overlay-nav-->
+        <div class="cd-overlay-content">
+            <span></span>
+        </div>
+        <!-- /cd-overlay-content-->
+        <a class="cd-nav-trigger" href="#0">
+            Menu<span class="cd-icon"></span>
+        </a>
+        <!-- /cd-nav-trigger-->
+        <script>
+            ANSLUME.paymentAddr = 'addr_test1qrygk6dl6led5pw0dz4pjlvmepkkrv5f58w69h62evyywgffzhz8g2vq0qu4gnmxj30agwy0rzacpc67uc9ge6u9fehskwdt70';
+            ANSLUME.contactEmail = "contact@cardano-native-token.com";
+            ANSLUME.sourceBlockChainAddress = `https://cardanoscan.io/address/${ANSLUME.paymentAddr}`;
+        </script>
+    </body>
+</html>
